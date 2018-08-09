@@ -6,9 +6,10 @@ header {
     .breadcrumbs {
         background: #fff; padding: 6px 14px 8px;
         li {
-            font-size: 12px; padding-right: 16px;
+            font-size: 12px; padding-right: 4px;
             a {color: $baseColor; text-decoration: none;}
             &.active a {color: #777777;}
+            i.fas.fa-angle-right {margin-left: 10px; color: #777;}
         }
     }
     .banner {
@@ -25,13 +26,24 @@ header {
 
     .tabs-section {
         .sec-single {
-            width: 50%; float: left; text-align: center; padding: 20px 0px;
+            width: 50%; float: left; text-align: center; padding: 20px 0px; position: relative;
+            &:first-child {
+                :after {
+                    content: "";
+                    width: 2px;
+                    height: 88px;
+                    background: #eaeaea;
+                    position: absolute;
+                    right: 0;
+                    top: 12px;
+                }
+            }
             p {color: #333333; font-size: 16px; margin-bottom: 20px; span {color: $baseColor;}}
             ul {font-size: 0;}
             li {
                 color: #777777; font-family: dufont-reg; border-bottom: 3px solid #dddddd; font-size: 18px;
-                padding: 0px 30px;
-                &.active {border-bottom: 5px solid $baseColor; color: $baseColor; font-family: dufont-bold;}
+                padding: 0px 30px; padding-bottom: 10px;
+                &.active {border-bottom: 5px solid $baseColor; color: $baseColor; font-family: dufont-bold; padding-bottom: 8px;}
             }
         }
     }
@@ -42,8 +54,8 @@ header {
     h3 {color: $fontColor; font-size: 15px; margin: 20px auto; display: table; span {font-family: dufont-bold;}}
     .package-single {
         text-align: center; border: 1px solid $baseColor; overflow: hidden; border-radius: 10px 10px 0px 0px;
-        margin-bottom: 50px;
-        .head {background: $fontColor; color: #fff; font-family: dufont-bold; font-size: 18px; padding: 6px 0px;}
+        margin-bottom: 50px; padding-bottom: 9px;
+        .head {background: $fontColor; color: #fff; font-family: dufont-bold; font-size: 18px; padding: 8px 0px;}
         .price {font-family: dufont-reg; font-size: 15px; span {font-family: dufont-bold; font-size: 38px;}}
         .get {font-family: dufont-bold; font-size: 18px; color: #fff; background: $baseColor; padding: 6px 0px; span {font-family: dufont-reg;}}
         .data {
@@ -55,12 +67,19 @@ header {
         }
         .emptyrow {
             color: $baseColor;
-            border-bottom: 1px solid #cccc; padding: 8px 135px; display: table; margin: auto; font-size: 26px;
+            border-bottom: 1px solid #ccc; padding: 8px 135px; display: table; margin: auto; font-size: 26px;
         }
         .logos {
             color: $baseColor; padding: 12px 0px;
             img {display: inline-block; max-width: 85px; margin: 0px 12px;}
         }
-        .ctas {}
+        .ctas {
+            .cta {
+                border: 0; font-family: dufont-reg; font-size: 18px; display: inline-block; color: #fff;
+                min-width: 46%; margin: 0px 2px; padding: 8px 0px;
+                &.blue {background: $baseColor;}
+                &.pink {background: $fontColor;}
+            }
+        }
     }
 }
