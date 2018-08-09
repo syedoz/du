@@ -1,0 +1,66 @@
+header {
+    margin-top: 40px;
+    ul {margin: 0; padding: 0;}
+    li {list-style-type: none; display: inline-block;}
+    .top-container {background: #f7f7f7; border: 1px solid #efefef;}
+    .breadcrumbs {
+        background: #fff; padding: 6px 14px 8px;
+        li {
+            font-size: 12px; padding-right: 16px;
+            a {color: $baseColor; text-decoration: none;}
+            &.active a {color: #777777;}
+        }
+    }
+    .banner {
+        img {width: 100%;}
+    }
+    .top-heading {
+        text-align: center;
+        font-family: dufont-reg;
+        font-size: 22px;
+        border-bottom: 1px solid #e8e7e7;
+        border-top: 1px solid #e8e7e7;
+        padding: 12px 0px;
+    }
+
+    .tabs-section {
+        .sec-single {
+            width: 50%; float: left; text-align: center; padding: 20px 0px;
+            p {color: #333333; font-size: 16px; margin-bottom: 20px; span {color: $baseColor;}}
+            ul {font-size: 0;}
+            li {
+                color: #777777; font-family: dufont-reg; border-bottom: 3px solid #dddddd; font-size: 18px;
+                padding: 0px 30px;
+                &.active {border-bottom: 5px solid $baseColor; color: $baseColor; font-family: dufont-bold;}
+            }
+        }
+    }
+}
+
+.packages-container {
+    .container {padding: 0px 70px;}
+    h3 {color: $fontColor; font-size: 15px; margin: 20px auto; display: table; span {font-family: dufont-bold;}}
+    .package-single {
+        text-align: center; border: 1px solid $baseColor; overflow: hidden; border-radius: 10px 10px 0px 0px;
+        margin-bottom: 50px;
+        .head {background: $fontColor; color: #fff; font-family: dufont-bold; font-size: 18px; padding: 6px 0px;}
+        .price {font-family: dufont-reg; font-size: 15px; span {font-family: dufont-bold; font-size: 38px;}}
+        .get {font-family: dufont-bold; font-size: 18px; color: #fff; background: $baseColor; padding: 6px 0px; span {font-family: dufont-reg;}}
+        .data {
+            padding: 2px 0px 8px;
+            &.border {border-top: 1px solid $baseColor; border-bottom: 1px solid $baseColor;}
+            &.padded {border-bottom: 1px solid #cccc; padding: 10px 110px; display: table; margin: auto; .value {font-family: dufont-reg;}}
+            .value {font-family: dufont-light; font-size: 15px; color: $baseColor; span {font-family: dufont-bold; font-size: 38px;}}
+            .txt {color: #666666; margin-top: -4px;}
+        }
+        .emptyrow {
+            color: $baseColor;
+            border-bottom: 1px solid #cccc; padding: 8px 135px; display: table; margin: auto; font-size: 26px;
+        }
+        .logos {
+            color: $baseColor; padding: 12px 0px;
+            img {display: inline-block; max-width: 85px; margin: 0px 12px;}
+        }
+        .ctas {}
+    }
+}
